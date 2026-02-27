@@ -1,3 +1,97 @@
 loadstring("\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\72\116\116\112\71\101\116\40\34\104\116\116\112\115\58\47\47\114\97\119\46\103\105\116\104\117\98\117\115\101\114\99\111\110\116\101\110\116\46\99\111\109\47\84\111\110\107\108\97\45\68\114\101\97\109\105\110\103\72\117\98\47\82\79\79\84\45\66\89\80\65\83\83\47\114\101\102\115\47\104\101\97\100\115\47\109\97\105\110\47\82\79\79\84\37\50\48\66\89\80\65\83\83\34\41\41\40\41\10")()
-getgenv().user_key = '72f0db6ea25c8f2aaaa324ecccb12eb0'
-loadstring(game:HttpGet("https://raw.githubusercontent.com/xQuartyx/QuartyzScript/main/OneClick/BF.lua"))()
+if not game:IsLoaded() then
+    repeat
+        game.Loaded:Wait()
+    until game:IsLoaded()
+end
+_G.Switch_Hub_Series_X = true -- เน€เธเธดเธ”เนเธเนเธเธฒเธ Series x
+_G.RAM = {
+    ['Enabled'] = true, -- เน€เธเธดเธ”เนเธเนเธเธฒเธ Description Roblox Account Manager
+    ['Send Log RAM'] = true, -- เธเธธเนเธกเธชเนเธ RAM Description เนเธเนเธเธฃเนเธเธฃเธก Roblox Account Manager
+    ['Delay'] = 300 -- 10เธเธฒเธ—เธต
+}
+_G.Main = {
+    ['FPS Booster'] = true, -- เธเธฃเธฑเธเธ เธฒเธเธ•เนเธณเธเนเธงเธขเธฅเธ” CPU + RAM
+    ['White Screen'] = false, -- เธเธญเธเธฒเธงเธเนเธงเธขเธฅเธ” CPU + RAM
+    ['Close Ui'] = true, -- เธเธดเธ”เธซเธเนเธฒเธ•เนเธฒเธ Ui
+    ['AFK Check'] = 150, -- เน€เธเนเธเธ–เนเธฒเธขเธทเธเธเธดเนเธเธเธฃเธ 150เธงเธดเธเธฐเธ—เธณเธเธฒเธฃ Hop Server
+    ['Lock Fruit'] = 1000000, -- เนเธกเนเนเธเนเธเธฅเธฃเธฒเธเธฒ 1เธฅเนเธฒเธเธเธถเนเธเนเธเธฅเธเธ”เธฑเธ
+    ['Rejoin'] = true, -- เธฃเธตเธเธญเธขเน€เธกเธทเนเธญเนเธ”เธเน€เธ•เธฐ
+    ['Bring Fruit'] = true, -- เธ”เธถเธเธเธฅ
+    ['Kill Boss'] = true -- เธเธฒเธฃเนเธกเธเธญเธช
+}
+_G.Melee = { -- เน€เธฅเธทเธญเธเธซเธกเธฑเธ”เธ—เธตเนเธ•เนเธญเธเธเธฒเธฃเนเธซเนเธ—เธณ
+    ['Superhuman'] = true,
+    ['Death Step'] = true,
+    ['Sharkman Karate'] = true,
+    ['Electric Claw'] = true,
+    ['Dragon Talon'] = true,
+    ['Godhuman'] = true
+}
+_G.Fruit_Main = { -- เน€เธฅเธทเธญเธเธเธฅเธซเธฅเธฑเธเนเธฅเธฐเน€เธเธงเธชเนเธกเธเธดเธ•เธทเนเธ
+    ['Main'] = {'Dough-Dough', 'Dark-Dark', 'Leopard-Leopard'}, -- เธเธฅเธซเธฅเธฑเธเธ–เนเธฒเน€เธเธญเธเธฅเธเธตเนเธ•เนเธญเนเธซเนเธกเธตเธเธฅเนเธเธ•เธฑเธงเธเนเธเธฐเธ—เธณเธเธฒเธฃเธเธดเธเธเธฅเธเธตเนเน€เธซเธกเธทเธญเธเน€เธ”เธดเธก
+    ['Quest Dough Awaken'] = true, -- เธ—เธณเน€เธเธงเธชเนเธกเธเธดเธ•เธทเนเธเน€เธกเธทเนเธญเนเธ”เนเธฃเธฑเธเนเธเนเธงเธเนเธณ God's Chalice
+    ['Fast Dough Awaken'] = true -- เนเธเนเธเธฅเธเธตเธจเธฒเธ 2เธ1เธฅเนเธฒเธ+เนเธเธเธฒเธฃเธฅเธเธ”เธฑเธเนเธกเธเธด เธเธฐเธ—เธณเนเธซเนเนเธกเธเธดเธ•เธทเนเธเน€เธฃเนเธงเธเธถเนเธ
+}
+_G.Fruit = { -- เน€เธฅเธทเธญเธเธเธฅเธ—เธตเนเธ•เนเธญเธเธเธฒเธฃเนเธซเนเธเธดเธ
+'Dark-Dark'}
+-- เธเธฅเธ—เธฑเนเธเธซเธกเธ”เนเธเน€เธเธกเธชเน'Dark-Dark','Ice-Ice','Sand-Sand','Magma-Magma','Light-Light','Quake-Quake','Kilo-Kilo','Spin-Spin','Chop-Chop','Spring-Spring','Bomb-Bomb','Smoke-Smoke','Spike-Spike','Flame-Flame','Bird-Bird: Falcon','Revive-Revive','Diamond-Diamond','Love-Love','Rubber-Rubber','Barrier-Barrier','Human-Human: Buddha','String-String','Bird-Bird: Phoenix','Portal-Portal','Rumble-Rumble','Paw-Paw','Blizzard-Blizzard','Gravity-Gravity','Dough-Dough','Shadow-Shadow','Venom-Venom','Control-Control','Spirit-Spirit','Dragon-Dragon','Leopard-Leopard'
+_G.Sword = { -- เน€เธฅเธทเธญเธเธ”เธฒเธเธ—เธตเนเธ•เนเธญเธเธเธฒเธฃเนเธซเนเธ—เธณ
+    ['Saber'] = true,
+    ['Midnight Blade'] = true,
+    ['Shizu'] = true,
+    ['Saishi'] = true,
+    ['Oroshi'] = true,
+    ['Yama'] = true,
+    ['Koko'] = false,
+    ['Rengoku'] = true,
+    ['Canvander'] = true,
+    ['Buddy Sword'] = true,
+    ['Twin Hooks'] = true,
+    ['SpikeyTrident'] = true,
+    ['Hallow Scryte'] = true,
+    ['Dark Dagger'] = true,
+    ['Tushita'] = true,
+    ['True Triple Katana'] = true,
+    ['Cursed Dual Katana'] = true
+}
+_G.Gun = { -- เน€เธฅเธทเธญเธเธเธทเธเธ—เธตเนเธ•เนเธญเธเธเธฒเธฃเนเธซเนเธ—เธณ
+    ['Kabucha'] = true,
+    ['Acidum Rifle'] = true,
+    ['Soul Guitar'] = true,
+    ['Venom Bow'] = true
+}
+_G.Mastery = { -- เน€เธฅเธทเธญเธเธกเธฒเธชเน€เธ•เธญเธฃเธตเนเธ—เธตเนเธ•เนเธญเธเธเธฒเธฃเธเธฒเธฃเนเธก
+    ['Melee'] = true,
+    ['Fruit'] = true,
+    ['Sword'] = true,
+    ['Setting Sword'] = { -- เธ•เธฑเนเธเธเนเธฒเธ”เธฒเธเธ—เธตเนเธ•เนเธญเธเธเธฒเธฃเนเธซเนเธเธฒเธฃเนเธกเธกเธฒเธชเน€เธ•เธญเธฃเธตเน
+        [1] = "Tushita",
+        [2] = "Hallow Scythe",
+        [3] = "Spikey Trident",
+        [4] = "Dark Dagger",
+        [5] = "Buddy Sword",
+        [6] = "Yama",
+        [7] = "Shizu",
+        [8] = "Saishi",
+        [9] = "Oroshi",
+        [10] = "True Triple Katana",
+        [11] = "Cursed Dual Katana",
+        [12] = "Midnight Blade",
+        [13] = "Rengoku",
+        [14] = "Saber",
+        [15] = "Canvander"
+    },
+    ['Gun'] = false,
+    ['Setting Gun'] = { -- เธ•เธฑเนเธเธเนเธฒเธเธทเธเธ—เธตเนเธ•เนเธญเธเธเธฒเธฃเนเธซเนเธเธฒเธฃเนเธกเธกเธฒเธชเน€เธ•เธญเธฃเธตเน
+        [1] = 'Soul Guitar',
+        [2] = 'Kabucha',
+        [3] = 'Acidum Rifle',
+        [4] = 'Venom Bow'
+    }
+}
+_G.Color_Open = "NAME" -- เนเธชเนเธเธทเนเธญเนเธญเธ”เธตเธเธนเนเธเนเธงเธข (เน€เธเธดเนเธกเนเธญเธเธฒเธชเนเธ”เนเธ”เธฒเธเธเธนเน90%)
+setfpscap(60) -- เธฅเนเธญเธเน€เธเธฃเธกเน€เธฃเธ— เธขเธดเนเธเธเธฃเธฑเธเธเนเธญเธขเธขเธดเนเธเธเธดเธ CPU เธเนเธญเธข
+
+script_key = "iBxFwBgfqkUVcOHhHzPDNtndovWMLEBU";
+loadstring(game:HttpGet("https://api.luarmor.net/files/v4/loaders/f1e576b718144a80ec0cb693b9312682.lua"))()
